@@ -25,7 +25,7 @@ if  args[0] == "--login":
                 print(f"Welcome {x[0]}!!")
                 exit()
 
-    raise Exception("No user avalible Register first\nOR\nWrong password")
+    os.exit("No user avalible Register first\nOR\nWrong password")
 
 
 
@@ -36,7 +36,7 @@ elif args[0] == "--register":
     for i in myresult:
         x =list(i)
         if args[2] == x[0]:
-            raise Exception("already user avalible\n try anothrer user name")
+            os.exit("already user avalible\n try anothrer user name")
 
 
     query = "INSERT INTO atm (Name, username, password, amount) VALUES (%s,%s,%s,%s)"
